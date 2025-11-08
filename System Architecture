@@ -1,0 +1,112 @@
+# 🏗️ System Architecture – ScholarGuide Tech
+
+ScholarGuide Tech is built as a scalable, cloud-based educational platform that connects students, mentors, parents, and institutions in one integrated ecosystem.  
+The system is designed to ensure **security, flexibility, and real-time collaboration** across web and mobile platforms.
+
+---
+
+## 🧩 Overview
+
+The system follows a **modular client–server architecture** with three core layers:
+1. **Frontend (Client Layer)**
+2. **Backend (Application Layer)**
+3. **Database (Data Layer)**
+
+These layers communicate seamlessly via **RESTful APIs** to deliver smooth user experiences across all devices.
+
+---
+
+## 🖥️ 1. Frontend (Client Layer)
+
+The frontend is responsible for user interaction and presentation. It is designed to be responsive and consistent across web and mobile.
+
+- **Frameworks:**  
+  - Web: React.js  
+  - Mobile: React Native  
+- **Functions:**  
+  - Displays dashboards, mentor profiles, and resources  
+  - Handles real-time interactions during live mentorship sessions  
+  - Integrates authentication and personalized user flows via API calls  
+- **Key Features:**  
+  - Role-based interfaces for students, parents, mentors, and admins  
+  - Notifications and event reminders  
+  - Optimized for accessibility and mobile responsiveness  
+
+---
+
+## ⚙️ 2. Backend (Application Layer)
+
+The backend serves as the engine that powers all interactions and data management within the app.
+
+- **Technology Stack:** Node.js with Express.js  
+- **Functions:**  
+  - Handles user authentication and authorization (JWT-based)  
+  - Processes mentorship requests, bookings, and content uploads  
+  - Manages API communication between frontend and database  
+  - Controls access to educational resources and live session scheduling  
+- **APIs:**  
+  - RESTful APIs built for modular scalability  
+  - Connected to third-party integrations such as LinkedIn, GitHub, and Google Meet for verification and live interactions  
+
+---
+
+## 🗄️ 3. Database (Data Layer)
+
+ScholarGuide Tech uses a NoSQL database for flexibility and scalability.
+
+- **Database:** MongoDB (via Mongoose ORM)  
+- **Data Stored:**  
+  - User profiles (students, mentors, parents, institutions)  
+  - Mentorship sessions and chat logs  
+  - Learning resources and media files  
+  - Event schedules and performance analytics  
+- **Security:**  
+  - Encrypted data at rest  
+  - Role-based access control to ensure user privacy  
+
+---
+
+## ☁️ 4. Cloud Infrastructure
+
+- **Hosting & Deployment:** Render (for backend) and Firebase (for frontend + authentication)  
+- **Media Storage:** Cloudinary for resource and image hosting  
+- **Notifications:** Firebase Cloud Messaging (FCM)  
+- **CI/CD:** GitHub Actions for automated testing and deployment  
+
+---
+
+## 🔁 System Communication Flow
+
+1. A user logs in or signs up via the web or mobile app.  
+2. The frontend sends a request to the backend API for authentication.  
+3. The backend verifies user credentials and retrieves data from MongoDB.  
+4. The authenticated user is granted access to their dashboard.  
+5. Any updates (e.g., mentorship booking, chat, or uploads) trigger real-time updates through API and Firebase notifications.  
+
+---
+
+## 🔐 Security Considerations
+
+- JWT-based authentication for all API endpoints  
+- Data encryption in transit (HTTPS/TLS)  
+- Admin-level monitoring via a secure dashboard  
+- Periodic backup of user data on cloud storage  
+
+---
+
+## 🧱 Scalability & Future Expansion
+
+The architecture is modular, making it easy to scale new features like:
+- AI-powered mentorship matching  
+- Learning analytics dashboard  
+- Community forums  
+- Integration with additional EdTech APIs  
+
+---
+
+## 🧭 Summary
+
+The ScholarGuide Tech system architecture focuses on creating a **secure, scalable, and collaborative learning environment**.  
+By combining React, Node.js, MongoDB, and cloud-based infrastructure, the platform ensures high performance and accessibility for users globally.
+
+---
